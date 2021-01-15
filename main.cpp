@@ -1,6 +1,15 @@
 #include <iostream>
+#include "factory.h"
+
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    OperationFactory fac;
+    Operation opr;
+    opr = fac.createOperate("+");
+    cout << opr.getresult() << endl;
+
     return 0;
 }
